@@ -12,7 +12,7 @@ function add(numbers) {
     let numArray = numbers.split(delimiter).map(Number);
 
     let negitiveNumbers = numArray.filter(num => num < 0);
-    if (negitiveNumbers.length > 0){
+    if (negitiveNumbers.length > 0) {
         throw new Error(`negative numbers not allowed ${negitiveNumbers}`)
     }
 
@@ -20,7 +20,7 @@ function add(numbers) {
 }
 
 // console.log(add('1\n2,3,4'));
-console.log(add('1,2,3,4'));
+// console.log(add('1,2,3,4'));
 //console.log(add('1\n2,-3,-4'));
 
 module.exports = add;
