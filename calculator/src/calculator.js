@@ -11,6 +11,11 @@ function add(numbers) {
 
     let numArray = numbers.split(delimiter).map(Number);
 
+    let negitiveNumbers = numArray.filter(num => num < 0);
+    if (negitiveNumbers.length > 0){
+        throw new Error(`negative numbers not allowed ${negitiveNumbers}`)
+    }
+
     return numArray.reduce((sum, num) => sum + num, 0);
 }
 
